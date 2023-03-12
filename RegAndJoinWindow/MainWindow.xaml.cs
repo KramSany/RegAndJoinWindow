@@ -35,7 +35,6 @@ namespace RegAndJoinWindow
             }
             else MessageBox.Show("Вы не администатор, чтобы открыть настройки!");
         }
-
         private void InfoEnter(object sender, MouseEventArgs e)
         {
             if (_check)
