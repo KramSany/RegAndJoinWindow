@@ -37,7 +37,7 @@ namespace UserRegistration
             if (Regex.Match(password,
             "[\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\{\\}\\[\\]\\:\\'\\;\\\"\\/\\?\\.\\>\\,\\<\\~\\`\\-\\\\_\\=\\+\\|]").Success)
             {
-                result++;
+                result++; 
             }
             return result;
         }
