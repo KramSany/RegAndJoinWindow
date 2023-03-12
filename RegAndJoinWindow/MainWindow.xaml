@@ -1,0 +1,30 @@
+﻿<Window x:Class="RegAndJoinWindow.MainWindow" Loaded="Window_Loaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegAndJoinWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="430">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="128*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="GroupBox">
+            <Grid>
+                <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="11,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MouseEnter="InfoEnter"/>
+                <Button Click="SortButton" Content="Сортировать" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="settingsButton" Content="Настройка" HorizontalAlignment="Left" Margin="112,125,0,0" VerticalAlignment="Top" Click="Settings"/>
+                <Button Content="Очистить" HorizontalAlignment="Left" Margin="112,100,0,0" VerticalAlignment="Top" Width="62"/>
+                <TextBox x:Name="textboxOut" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MouseEnter="InfoEnter"/>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
