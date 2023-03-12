@@ -36,7 +36,7 @@ namespace RegAndJoinWindow.Forms
             {
                 Login_TB.Clear();
                 passwordTB.Clear();
-                Login_TB.Focus();
+                Login_TB.Focus(); 
             }
         }
 

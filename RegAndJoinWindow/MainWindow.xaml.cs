@@ -2,6 +2,7 @@
 using RegAndJoinWindow.Forms;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
@@ -44,21 +45,37 @@ namespace RegAndJoinWindow
             }
         }
 
-        private void SortButton(object sender, RoutedEventArgs e)
+        public void SortButton(object sender, RoutedEventArgs e)
         {
-            string text = textbox1.Text;
-            List<int> list = new List<int>();
-            for (int i = 0; i < text.Length; i++)
+            textboxOut.Clear();
+            int[] array;
+            array = textbox1.Text.Split(',').Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => int.Parse(x)).ToArray();
+            BubbleSort(array);
+            for (int i = 0; i < array.Length; i++)
             {
-                list.Add(Int32.Parse(text[i].ToString()));
+                textboxOut.Text += $"{array[i]} ";
             }
-            list.Remove(',');
-            list.Sort();
-            for (int i = 0; i < list.Count; i++)
+            
+        }
+        static void Swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        static int[] BubbleSort(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
             {
-                textboxOut.Text += $"{list[i]}, ";
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        Swap(array, i, j);
+                    }
+                }
             }
-            textboxOut.Text.Remove(textboxOut.Text.Length - 1); // Sort will be fine...
+            return array;
         }
     }
 }
