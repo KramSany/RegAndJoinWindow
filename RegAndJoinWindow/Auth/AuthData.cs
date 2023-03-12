@@ -42,7 +42,6 @@ namespace RegAndJoinWindow.Auth
         {
             string json = JsonConvert.SerializeObject(_authenticationData, Formatting.Indented);
             File.WriteAllText(@"authenticationData.json", json);
-
         }
         private void Load()
         {
