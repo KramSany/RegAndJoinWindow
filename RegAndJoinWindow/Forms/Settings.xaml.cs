@@ -25,7 +25,7 @@ namespace RegAndJoinWindow.Forms
         }
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
-
+             
         }
     }
 }
