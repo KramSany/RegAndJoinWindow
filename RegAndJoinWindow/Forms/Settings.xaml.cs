@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UserRegistration;
 
 namespace RegAndJoinWindow.Forms
 {
@@ -25,7 +26,11 @@ namespace RegAndJoinWindow.Forms
         }
         private void SaveSettings_Click(object sender, RoutedEventArgs e)
         {
-             
+            int[] array;
+            array = changeColorBackground.Text.Split(',').Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => int.Parse(x)).ToArray();
+            Brush backColor = new SolidColorBrush(Color.FromRgb((byte)array[0], (byte)array[1], (byte)array[2]));
+            ChangeColorBackground.ChangeColor(backColor);
+            Close();
         }
     }
 }

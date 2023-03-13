@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RegAndJoinWindow"
+        xmlns:local="clr-namespace:RegAndJoinWindow" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="Dev: kransany" Height="475" Width="430">
+        Title="Dev: kramsany" Height="475" Width="430">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="89*"/>
@@ -15,16 +15,18 @@
             <ColumnDefinition Width="47*"/>
             <ColumnDefinition Width="53*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="GroupBox">
+        <GroupBox Header="Входные и выходные данные">
             <Grid>
                 <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="11,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MouseEnter="InfoEnter"/>
-                <Button Click="SortButton" Content="Сортировать" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="settingsButton" Content="Настройка" HorizontalAlignment="Left" Margin="112,125,0,0" VerticalAlignment="Top" Click="Settings"/>
-                <Button Content="Очистить" HorizontalAlignment="Left" Margin="112,100,0,0" VerticalAlignment="Top" Width="62"/>
-                <TextBox x:Name="textboxOut" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MouseEnter="InfoEnter"/>
+                <Button Click="SortButton" Content="Сортировать" HorizontalAlignment="Left" Margin="11,95,0,0" VerticalAlignment="Top" Width="91"/>
+                <Button x:Name="settingsButton" Content="Настройка" HorizontalAlignment="Left" Margin="112,120,0,0" VerticalAlignment="Top" Click="Settings"/>
+                <Button Content="Очистить" HorizontalAlignment="Left" Margin="112,95,0,0" VerticalAlignment="Top" Width="62" Click="Clear_Click"/>
+                <TextBox IsReadOnly="True" x:Name="textboxOut" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MouseEnter="InfoEnter"/>
+                <Button x:Name="updateUsers" Content="Обновить&#xD;&#xA;пользователей" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Click="updateUsers_Click" Width="92" Height="35"/>
 
             </Grid>
         </GroupBox>
+        <ListBox x:Name="listbox" Grid.ColumnSpan="2" Margin="202,10,0,0"/>
 
     </Grid>
 </Window>

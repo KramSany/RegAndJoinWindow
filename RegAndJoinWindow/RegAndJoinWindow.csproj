@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UserRegistration\UserRegistration.csproj" />
+    <ProjectReference Include="..\UserRegistration\Classes.csproj" />
   </ItemGroup>
 
 </Project>

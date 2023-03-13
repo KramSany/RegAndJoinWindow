@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegAndJoinWindow.Forms"
-        mc:Ignorable="d"
-        Title="SignIn" Height="220" Width="250">
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner" WindowStyle="None"
+        Title="SignIn" Height="171" Width="250">
     <StackPanel>
         <Label Content="Login" HorizontalAlignment="Center" FontSize="18"></Label>
         <TextBox x:Name="Login_TB" Background="White" Height="30" ></TextBox>
         <Label Content="Password" HorizontalAlignment="Center" FontSize="18"></Label>
         <TextBox x:Name="PasswordBox" Height="30"></TextBox>
-        <Button Height="30" Content="Sign In" FontSize="18" Click="Login_Click"></Button>
+        <Button Height="30" Content="Sign In" FontSize="18" Click="Login_Click" Width="129"></Button>
         <TextBlock x:Name="TextBlock" Height="30" FontSize="18"/>
     </StackPanel>
 </Window>

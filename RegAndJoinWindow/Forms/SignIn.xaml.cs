@@ -22,6 +22,10 @@ namespace RegAndJoinWindow.Forms
                 return;
             }
             AuthData.CheckRule(Login_TB.Text);
+            AuthData.ListUsers();
+            if (AuthData.Level == 1) MessageBox.Show("Добрый день!\nВы вашли как Администатор программы.\nВы на пол шишки оператор");
+            else if (AuthData.Level == 2) MessageBox.Show("Добрый день!\nВы вашли как Оператор программы.\nВы бог...");
+            else MessageBox.Show("Добрый день!\nВы вашли как пользователь программы.\nВы никто...");
             Owner.Close();
         }
     }

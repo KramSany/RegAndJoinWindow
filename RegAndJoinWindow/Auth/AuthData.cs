@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
+using System.Linq;
 
 namespace RegAndJoinWindow.Auth
 {
@@ -13,6 +14,7 @@ namespace RegAndJoinWindow.Auth
             Load();
         }
         public static int Level { get; set; }
+        public static string[] Users { get; set; }
 
         public bool AddUser(string login, string password)
         {
@@ -55,7 +57,17 @@ namespace RegAndJoinWindow.Auth
         public void CheckRule(string login)
         {
             if (login == "admin") Level = 1;
+            else if (login == "operator") Level = 2;
             else Level = 0;
+        }
+        public void ListUsers()
+        {
+            string[] users = new string[_authenticationData.Count];
+            for (int i = 0; i < _authenticationData.Count; i++)
+            {
+                users[i] = _authenticationData.ElementAt(i).Key;
+            }
+            Users = users;
         }
     }
 }

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegAndJoinWindow", "RegAndJoinWindow\RegAndJoinWindow.csproj", "{4D54C779-08E2-4925-A68C-151747BCD797}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegAndJoinWindow", "RegAndJoinWindow\RegAndJoinWindow.csproj", "{4D54C779-08E2-4925-A68C-151747BCD797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistration", "UserRegistration\UserRegistration.csproj", "{DD01F7D8-3A3F-43EE-ABAB-40C6557EE60B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "UserRegistration\Classes.csproj", "{DD01F7D8-3A3F-43EE-ABAB-40C6557EE60B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

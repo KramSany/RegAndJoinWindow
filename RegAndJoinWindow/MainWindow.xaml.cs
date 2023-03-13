@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using UserRegistration;
 
 namespace RegAndJoinWindow
 {
@@ -15,6 +17,7 @@ namespace RegAndJoinWindow
     {
         MenuRegAndJoin menuRegAndJoin = new MenuRegAndJoin();
         bool _check = true;
+        string[] users;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +36,7 @@ namespace RegAndJoinWindow
                 Settings settings = new();
                 settings.Owner = this;
                 settings.ShowDialog();
+                this.Background = ChangeColorBackground.BackgroundColor;
             }
             else MessageBox.Show("Вы не администатор, чтобы открыть настройки!");
         }
@@ -43,6 +47,7 @@ namespace RegAndJoinWindow
                 MessageBox.Show("Введите числа через запятую!");
                 _check = false;
             }
+            
         }
 
         public void SortButton(object sender, RoutedEventArgs e)
@@ -76,6 +81,26 @@ namespace RegAndJoinWindow
                 }
             }
             return array;
+        }
+
+        private void updateUsers_Click(object sender, RoutedEventArgs e)
+        {
+            if (AuthData.Level == 2)
+            {
+                users = AuthData.Users;
+                for (int i = 0; i < users.Length; i++)
+                {
+                    listbox.Items.Add($"Логин : {users[i]}");
+                }
+            }
+            else MessageBox.Show("Вы не оператор этой программы. Логи не доступны.");
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            textbox1.Clear();
+            textboxOut.Clear();
+            listbox.Items.Clear();
         }
     }
 }
